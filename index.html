@@ -3,35 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Name Display</title>
+    <title>Sudhanshu Kumar - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #121212;
-            color: white;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
-        .name {
-            font-size: 3rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            background: linear-gradient(45deg, #ff00ff, #00ffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
         }
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px #ff00ff; }
-            100% { text-shadow: 0 0 20px #00ffff; }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 40px 0;
+            text-align: center;
+        }
+        header {
+            background: url('https://source.unsplash.com/1600x900/?technology,coding') no-repeat center center/cover;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-top: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #222;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        nav a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+        section {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #555;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: #333;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #333;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .contact-form button:hover {
+            background: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
         }
     </style>
 </head>
 <body>
 
-    <div class="name">Sudhanshu Kumar</div>
+    <header>
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+        <h1>Sudhanshu Kumar</h1>
+        <p>Web Developer | Designer | Freelancer</p>
+        <a href="resume.pdf" class="btn" download>Download Resume</a>
+        <div class="social-icons">
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Hello! I'm Sudhanshu Kumar, a full-stack web developer with experience in building modern, responsive, and user-friendly websites.</p>
+        <img src="https://source.unsplash.com/600x400/?developer" alt="About Image" width="80%">
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <p>HTML, CSS, JavaScript, React.js, Node.js, Python, SQL, Bootstrap, Git & GitHub</p>
+        <img src="https://source.unsplash.com/600x400/?skills" alt="Skills Image" width="80%">
+    </section>
+
+    <section id="experience" class="container">
+        <h2>Experience</h2>
+        <p>💼 Web Developer at XYZ Company (2023-Present)<br>💼 Freelance Web Designer (2021-2023)</p>
+        <img src="https://source.unsplash.com/600x400/?teamwork" alt="Experience Image" width="80%">
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <p>📌 **Portfolio Website** – Designed a personal portfolio website.<br>
+        📌 **E-commerce Website** – Developed an online shopping site.<br>
+        📌 **AI Chatbot** – Created a chatbot using Python & AI.</p>
+        <a href="#" class="btn">View More Projects</a>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Sudhanshu Kumar. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
